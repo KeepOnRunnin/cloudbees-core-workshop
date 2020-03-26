@@ -11,8 +11,7 @@ pipeline {
           label 'nodejs-app-pod'
           yamlFile 'nodejs-pod.yaml'
         }
-        label 'nodejs-app' }
-      steps {
+            steps {
         checkout scm
         container('nodejs') {
           echo 'Hello World!'   
